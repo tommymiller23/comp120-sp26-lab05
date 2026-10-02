@@ -7,7 +7,7 @@ def exponential_counter(n: int) -> None:
     for i in range(2**n):
         counter += 1
 
-def contains_duplicates(l: list) -> bool:
+def contains_duplicates(l: list[int]) -> bool:
     for i in range(len(l)):
         for j in range(i+1,len(l)):
             if l[i]==l[j]:
