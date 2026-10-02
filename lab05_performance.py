@@ -7,6 +7,13 @@ def exponential_counter(n: int) -> None:
     for i in range(2**n):
         counter += 1
 
+def contains_duplicates(l: list) -> bool:
+    for i in range(len(l)):
+        for j in range(i+1,len(l)):
+            if l[i]==l[j]:
+                return True
+    return False
+
 
 def generate_random_integers(n: int) -> list[int]:
     """Generates a list of n random integers, with each number
@@ -16,7 +23,13 @@ def generate_random_integers(n: int) -> list[int]:
 
 
 def main() -> None:
-    pass
+    num = int(input("gimmie a number"))
+    start = time.time()
+    exponential_counter(num)
+    end = time.time()
+
+    print(f"\n{end-start}")
+
 
 
 # DO NOT MODIFY ANYTHING BELOW THIS LINE
